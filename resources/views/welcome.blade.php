@@ -48,7 +48,7 @@
         </div>
         <div class="w-full h-auto">
             <div class="max-w-[1400px] mx-auto flex flex-col gap-8">
-                <div class="w-full h-[450px] rounded-3xl bg-cover bg-center relative" style="background-image: url('/assets/hero-home.jpg')">
+                <div class="w-full h-[450px] rounded-3xl bg-cover bg-center relative" style="background-image: url('/assets/hero-home.webp')">
                     <div class="w-full h-full bg-[#141008]/40 flex flex-col justify-center px-8 grid grid-cols-3">
                         <div class="col-span-2 h-full flex flex-col justify-center">
                             <h1 class="text-[35px] md:text-[45px] lg:text-[65px] font-[700] text-white mb-8 leading-[1]">Stap binnen en laat ons <br>u <span class="backdrop-underline">stijlvol</span> maken.</h1>
@@ -78,6 +78,23 @@
                     <video class="max-w-[13rem] rounded-xl" src="/assets/reels/day-at-shop.mp4" autoplay loop muted playsinline></video>
                     <video class="max-w-[13rem] rounded-xl" src="/assets/reels/lil-bro.mp4" autoplay loop muted playsinline></video>
                 </div> -->
+            </div>
+        </div>
+        <div class="w-full h-auto py-20">
+            <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-16">
+                <div class="w-full flex items-end justify-between">
+                    <h2 class="text-5xl text-white font-[500]">Meer dan<br>een <span class="text-[#947341]">knipbeurt</span></h2>
+                    <p class="text-sm text-white opacity-80 max-w-[500px] text-end">
+                        Een knipbeurt is bij ons een beleving. Persoonlijk advies, vakmanschap en een ontspannen sfeer staan altijd centraal.
+                    </p>
+                </div>
+                <div class="w-full flex items-center justify-between">
+                    <img src="/assets/intro-1.webp" class="max-w-[15rem] rounded-3xl">
+                    <img src="/assets/intro-2.webp" class="max-w-[15rem] rounded-3xl">
+                    <img src="/assets/intro-3.webp" class="max-w-[15rem] rounded-3xl">
+                    <img src="/assets/intro-4.webp" class="max-w-[15rem] rounded-3xl">
+                    <img src="/assets/intro-5.webp" class="max-w-[15rem] rounded-3xl">
+                </div>
             </div>
         </div>
     </body>
