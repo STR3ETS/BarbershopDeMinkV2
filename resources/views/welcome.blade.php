@@ -13,6 +13,8 @@
         <noscript>
             <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
         </noscript>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -51,13 +53,16 @@
                 <div class="w-full h-[450px] rounded-3xl bg-cover bg-center relative" style="background-image: url('/assets/hero-home.webp')">
                     <div class="w-full h-full bg-[#141008]/40 flex flex-col justify-center px-8 grid grid-cols-3">
                         <div class="col-span-2 h-full flex flex-col justify-center">
-                            <h1 class="text-[35px] md:text-[45px] lg:text-[65px] font-[700] text-white mb-8 leading-[1]">Stap binnen en laat ons <br>u <span class="backdrop-underline">stijlvol</span> maken.</h1>
-                            <p class="text-sm text-white opacity-80 max-w-[500px] mb-4">
+                            <h1 class="hero-title text-[35px] md:text-[45px] lg:text-[65px] font-[700] text-white mb-8 leading-[1]">Stap binnen en laat ons <br>u <span class="backdrop-underline hero-underline">stijlvol</span> maken.</h1>
+                            <p class="hero-sub text-sm text-white opacity-80 max-w-[500px] mb-4">
                                 Bij ons draait alles om stijl. Van klassieke snitten tot moderne looks,
                                 wij creëren moeiteloos stijlvolle verschijningen die jouw persoonlijkheid accentueren.
                                 Stap binnen en ontdek de kunst van verfijnde grooming
                             </p>
-                            <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
+                            <div class="hero-ctas flex items-center gap-4">
+                                <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
+                                <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#141008] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Diensten bekijken</a>
+                            </div>
                         </div>
                         <div class="py-8 flex flex-col items-end">
                             <div class="flex items-center justify-end gap-6">
@@ -73,14 +78,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="flex items-center gap-8 justify-center">
-                    <video class="max-w-[13rem] rounded-xl" src="/assets/reels/cutting-friends.mp4" autoplay loop muted playsinline></video>
-                    <video class="max-w-[13rem] rounded-xl" src="/assets/reels/day-at-shop.mp4" autoplay loop muted playsinline></video>
-                    <video class="max-w-[13rem] rounded-xl" src="/assets/reels/lil-bro.mp4" autoplay loop muted playsinline></video>
-                </div> -->
             </div>
         </div>
-        <div class="w-full h-auto py-20">
+        <div class="w-full h-auto py-24">
             <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-16">
                 <div class="w-full flex items-end justify-between">
                     <h2 class="text-5xl text-white font-[500]">Meer dan<br>een <span class="text-[#947341]">knipbeurt</span></h2>
@@ -97,5 +97,341 @@
                 </div>
             </div>
         </div>
+        <div class="w-full h-auto">
+            <div class="max-w-[1400px] mx-auto flex flex-col gap-16">
+                <h2 class="text-5xl text-white text-center font-[500]">Tarieven die passen bij<br><span class="text-[#947341]">vakmanschap</span></h2>
+                <div class="grid grid-cols-3 gap-12">
+                    <div class="w-full bg-[#1c160b] rounded-3xl p-8 flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-2xl text-[#bc9355] text-center font-[700] mb-6">Knippen</h2>
+                            <div class="flex flex-col gap-4 mb-8">
+                                <div class="grid grid-cols-5 gap-4 flex items-center">
+                                    <p class="text-sm text-white col-span-3">
+                                        Knippen & Stylen - Man
+                                    </p>
+                                    <hr class="col-span-1 border-[#947341]">
+                                    <h6 class="text-base text-white col-span-1 text-end">
+                                        25,-
+                                    </h6>
+                                </div>
+                                <div class="grid grid-cols-5 gap-4 flex items-center">
+                                    <p class="text-sm text-white col-span-3">
+                                        Knippen & Stylen - Kind<br><span class="text-xs opacity-50">Tot / met 12 jaar</span>
+                                    </p>
+                                    <hr class="col-span-1 border-[#947341]">
+                                    <h6 class="text-base text-white col-span-1 text-end">
+                                        22,50
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="w-full px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white text-center font-semibold">Plan nu mijn afspraak</a>
+                    </div>
+                    <div class="w-full bg-[#1c160b] rounded-3xl p-8 flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-2xl text-[#bc9355] text-center font-[700] mb-6">Baard</h2>
+                            <div class="flex flex-col gap-4 mb-8">
+                                <div class="grid grid-cols-5 gap-4 flex items-center">
+                                    <p class="text-sm text-white col-span-3">
+                                        Knippen & Stylen - Baard
+                                    </p>
+                                    <hr class="col-span-1 border-[#947341]">
+                                    <h6 class="text-base text-white col-span-1 text-end">
+                                        35,-
+                                    </h6>
+                                </div>
+                                <div class="grid grid-cols-5 gap-4 flex items-center">
+                                    <p class="text-sm text-white col-span-3">
+                                        Trimmen Baard
+                                    </p>
+                                    <hr class="col-span-1 border-[#947341]">
+                                    <h6 class="text-base text-white col-span-1 text-end">
+                                        12,50
+                                    </h6>
+                                </div>
+                                <div class="grid grid-cols-5 gap-4 flex items-center">
+                                    <p class="text-sm text-white col-span-3">
+                                        Hot Towel Shave
+                                    </p>
+                                    <hr class="col-span-1 border-[#947341]">
+                                    <h6 class="text-base text-white col-span-1 text-end">
+                                        22,50
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="w-full px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white text-center font-semibold">Plan nu mijn afspraak</a>
+                    </div>
+                    <div class="w-full bg-[#1c160b] rounded-3xl p-8 flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-2xl text-[#bc9355] text-center font-[700] mb-6">Overige</h2>
+                            <div class="flex flex-col gap-4 mb-8">
+                                <div class="grid grid-cols-5 gap-4 flex items-center">
+                                    <p class="text-sm text-white col-span-3">
+                                        Contouren
+                                    </p>
+                                    <hr class="col-span-1 border-[#947341]">
+                                    <h6 class="text-base text-white col-span-1 text-end">
+                                        10,-
+                                    </h6>
+                                </div>
+                                <div class="grid grid-cols-5 gap-4 flex items-center">
+                                    <p class="text-sm text-white col-span-3">
+                                        Speciale behandeling<br><span class="text-xs opacity-50">Alles voor haar & baard + drankje</span>
+                                    </p>
+                                    <hr class="col-span-1 border-[#947341]">
+                                    <h6 class="text-base text-white col-span-1 text-end">
+                                        50,-
+                                    </h6>
+                                </div>
+                                <div class="grid grid-cols-5 gap-4 flex items-center">
+                                    <p class="text-sm text-white col-span-3">
+                                        Waxen Neus
+                                    </p>
+                                    <hr class="col-span-1 border-[#947341]">
+                                    <h6 class="text-base text-white col-span-1 text-end">
+                                        3,-
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="w-full px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white text-center font-semibold">Plan nu mijn afspraak</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-auto py-24">
+            <div class="max-w-[1400px] mx-auto flex flex-col gap-16">
+
+            </div>
+        </div>
+        <div class="w-full h-auto py-12 bg-[#0f0a05]">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="w-full flex items-center justify-between mb-10">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="/assets/logo-wit.png" alt="Barbershop De Mink" class="max-w-14">
+                            <h6 class="text-xl text-white">
+                                Barbershop De Mink
+                            </h6>
+                        </div>
+                        <p class="text-sm text-white opacity-80 max-w-[500px]">
+                            Bij ons draait alles om stijl. Van klassieke snitten tot moderne looks,
+                            wij creëren moeiteloos stijlvolle verschijningen die jouw persoonlijkheid accentueren.
+                            Stap binnen en ontdek de kunst van verfijnde grooming
+                        </p>
+                    </div>
+                    <svg class="max-w-[9rem] rotating-seal"
+                        viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path style="fill:none!important;stroke:none!important;"
+                            id="circlePath"
+                            d="
+                            M 10, 50
+                            a 40,40 0 1,1 80,0
+                            a 40,40 0 1,1 -80,0
+                            "
+                        />
+                        <text fill="#bc9355" font-size="8">
+                            <textPath
+                            href="#circlePath"
+                            startOffset="50%"
+                            text-anchor="middle"
+                            lengthAdjust="spacing"
+                            textLength="251.33"
+                            >
+                                BARBERSHOP DE MINK &nbsp;
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <div class="w-full grid grid-cols-10 gap-8">
+                    <div class="col-span-5 flex gap-20">
+                        <div>
+                            <h6 class="text-lg text-[#bc9355] mb-4">Navigatie</h6>
+                            <ul class="text-sm text-white font-semibold flex flex-col gap-2">
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Home</a></li>
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Diensten</a></li>
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Kappers</a></li>
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Over ons</a></li>
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Reviews</a></li>
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="text-lg text-[#bc9355] mb-4">Diensten</h6>
+                            <ul class="text-sm text-white font-semibold flex flex-col gap-2">
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Haar knippen & Stylen</a></li>
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Baard knippen & stylen</a></li>
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Speciale diensten</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="text-lg text-[#bc9355] mb-4">Bedrijfsgegevens</h6>
+                            <ul class="text-sm text-white font-normal flex flex-col gap-2">
+                                <li>Barbershop De Mink</li>
+                                <li>Schilderspoort 4</li>
+                                <li class="mb-2">6901 DR Zevenaar</li>
+                                <li>KVK: 91577748</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-span-5">
+                        <div class="w-full h-full rounded-3xl overflow-hidden border border-white/10 shadow-sm">
+                            <iframe
+                                title="Barbershop De Mink - Locatie"
+                                class="w-full h-full"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps?q=Schilderspoort%204,%206901%20DR%20Zevenaar&output=embed"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-white/10 my-10">
+                <div class="w-full flex items-center justify-between">
+                    <p class="text-xs text-white opacity-50">
+                        Copyright © Barbershop De Mink
+                    </p>
+                    <p class="text-xs text-white opacity-50">
+                        Website gemaakt door <a href="https://www.halfmanmedia.nl" target="_blank" class="hover:text-[#bc9355] transition duration-300">HalfmanMedia</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-[5px] bg-[#bc9355]"></div>
+        @verbatim
+            <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                gsap.registerPlugin(ScrollTrigger);
+
+                const seal = document.querySelector('.rotating-seal');
+                if (!seal) return;
+
+                // Zorg dat rotatie perfect vanuit het midden draait
+                gsap.set(seal, { transformOrigin: '50% 50%' });
+
+                // Basis: rustig rond draaien
+                const spin = gsap.to(seal, {
+                rotation: 360,
+                duration: 30,          // lager = sneller. 18 is rustig.
+                ease: 'none',
+                repeat: -1
+                });
+
+                // Helper: terug naar normale snelheid na korte tijd
+                let revertTween;
+
+                function boostSpin(boostScale = 3.0) {
+                // versnel direct (smooth)
+                gsap.to(spin, {
+                    timeScale: boostScale,
+                    duration: 0.18,
+                    ease: 'power2.out',
+                    overwrite: true
+                });
+
+                // cancel eerdere "terug naar normaal"
+                if (revertTween) revertTween.kill();
+
+                // en na kort moment weer rustig
+                revertTween = gsap.to(spin, {
+                    timeScale: 1,
+                    duration: 0.9,
+                    ease: 'power3.out',
+                    delay: 0.25
+                });
+                }
+
+                // Scroll detectie (richting + snelheid)
+                ScrollTrigger.create({
+                start: 0,
+                end: 'max',
+                onUpdate(self) {
+                    const v = Math.abs(self.getVelocity()); // px/s
+                    // Map velocity -> boost (tweak naar smaak)
+                    // 0..2000 px/s => 1.2..4.0 timescale
+                    const boost = gsap.utils.clamp(1.2, 4.0, 1.2 + (v / 2000) * 2.8);
+                    boostSpin(boost);
+                }
+                });
+            });
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                // --- HERO H1: letter-voor-letter animatie ---
+                const h1 = document.querySelector('.hero-title');
+                if (h1) {
+                    // Split inhoud in spans per letter, behoud <br> en bestaande <span> tags.
+                    const splitToLetters = (el) => {
+                    const walk = (node) => {
+                        if (node.nodeType === 3) { // text node
+                        const text = node.nodeValue;
+                        const frag = document.createDocumentFragment();
+
+                        for (const char of text) {
+                            if (char === ' ') {
+                            frag.appendChild(document.createTextNode(' '));
+                            continue;
+                            }
+                            const s = document.createElement('span');
+                            s.className = 'char';
+                            s.textContent = char;
+                            frag.appendChild(s);
+                        }
+                        node.replaceWith(frag);
+                        } else if (node.nodeType === 1) {
+                        // element node: skip script/style
+                        const tag = node.tagName.toLowerCase();
+                        if (tag === 'script' || tag === 'style') return;
+
+                        // loop children (copy list eerst, want we muteren)
+                        Array.from(node.childNodes).forEach(walk);
+                        }
+                    };
+                    Array.from(el.childNodes).forEach(walk);
+                    };
+
+                    splitToLetters(h1);
+
+                    // Start state
+                    gsap.set(h1.querySelectorAll('.char'), {
+                        opacity: 0,
+                        y: 14,
+                        display: 'inline-block',
+                        willChange: 'transform, opacity'
+                    });
+
+                    // Animatie
+                    gsap.to(h1.querySelectorAll('.char'), {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.6,
+                        ease: 'power3.out',
+                        stagger: 0.018, // snelheid letters
+                        delay: 0.15
+                    });
+
+                    // --- HERO P: in 1x (fade + omhoog) ---
+                    const p = document.querySelector('.hero-sub');
+                    if (p) {
+                        gsap.set(p, {
+                            opacity: 0,
+                            y: 14,
+                            willChange: 'transform, opacity'
+                        });
+
+                        gsap.to(p, {
+                            opacity: 0.8,     // match met Tailwind opacity-80
+                            y: 0,
+                            duration: 0.8,
+                            ease: 'power3.out',
+                            delay: 1       // komt nét na de start van de H1
+                        });
+                    }
+                }
+                });
+            </script>
+        @endverbatim
     </body>
 </html>
