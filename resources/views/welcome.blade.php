@@ -70,7 +70,7 @@
                                 wij creëren moeiteloos stijlvolle verschijningen die jouw persoonlijkheid accentueren.
                                 Stap binnen en ontdek de kunst van verfijnde grooming
                             </p>
-                            <div class="hero-ctas flex items-center justify-center md:justify-start gap-4">
+                            <div class="hero-ctas flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-4">
                                 <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
                                 <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#141008] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Diensten bekijken</a>
                             </div>
