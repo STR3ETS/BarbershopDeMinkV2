@@ -32,11 +32,48 @@
 
             .faq-item.is-open .faq-title { color: #bc9355; }
             .faq-item.is-open .faq-icon { transform: rotate(180deg); color: #bc9355; }
+
+            #mobile-menu{
+                transition: transform .35s ease-in-out, opacity .2s ease-in-out;
+                transform: translateY(-100%);
+                opacity: 0;
+                pointer-events: none;
+            }
+            #mobile-menu.active{
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
         </style>
         
     </head>
     <body class="bg-[#141008]">
         <div class="grain pointer-events-none"></div>
+        <div id="mobile-menu" class="block md:hidden fixed inset-0 z-[9999] bg-[#141008]">
+            <div class="w-full h-auto py-8 px-4">
+                <div class="max-w-[1400px] mx-auto grid grid-cols-5 flex items-center">
+                    <div>
+                        <img src="/assets/logo-wit.png" alt="Barbershop De Mink" class="max-w-14">
+                    </div>
+                    <div class="col-span-3 flex items-center justify-center">
+
+                    </div>
+                    <div class="flex items-center justify-end">
+                        <button id="mobile-menu-close" class="block md:hidden">
+                            <i class="fa-solid fa-xmark text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <ul class="flex flex-col items-center gap-8 text-white text-sm font-semibold pt-10">
+                <li><a href="/" class="hover:text-[#bc9355] transition duration-300">Home</a></li>
+                <li><a href="#diensten" class="hover:text-[#bc9355] transition duration-300">Diensten</a></li>
+                <li><a href="#barbers" class="hover:text-[#bc9355] transition duration-300">Barbers</a></li>
+                <li><a href="#faq" class="hover:text-[#bc9355] transition duration-300">FAQ</a></li>
+                <li><a href="#reviews" class="hover:text-[#bc9355] transition duration-300">Reviews</a></li>
+            </ul>
+            <div class="w-full h-[5px] bg-[#bc9355] absolute bottom-0"></div>
+        </div>
         <div class="w-full h-auto py-8 px-4">
             <div class="max-w-[1400px] mx-auto grid grid-cols-5 flex items-center">
                 <div>
@@ -52,10 +89,10 @@
                     </ul>
                 </div>
                 <div class="flex items-center justify-end">
-                    <button class="block md:hidden">
+                    <button id="mobile-menu-open" class="block md:hidden">
                         <i class="fa-solid fa-bars text-white"></i>
                     </button>
-                    <a href="#" class="hidden md:block px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
+                    <a href="https://barbershop-de-mink.salonized.com/widget_bookings/new" target="_blank" class="hidden md:block px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
                 </div>
             </div>
         </div>
@@ -71,8 +108,8 @@
                                 Stap binnen en ontdek de kunst van verfijnde grooming
                             </p>
                             <div class="hero-ctas flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-4">
-                                <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
-                                <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#141008] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Diensten bekijken</a>
+                                <a href="https://barbershop-de-mink.salonized.com/widget_bookings/new" target="_blank" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
+                                <a href="#diensten" class="w-fit px-6 py-2 rounded-full bg-[#141008] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Diensten bekijken</a>
                             </div>
                         </div>
                         <div class="md:py-8 flex flex-col md:items-end items-center ">
@@ -119,7 +156,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="w-full px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white text-center font-semibold">Plan nu mijn afspraak</a>
+                        <a href="https://barbershop-de-mink.salonized.com/widget_bookings/new" target="_blank" class="w-full px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white text-center font-semibold">Plan nu mijn afspraak</a>
                     </div>
                     <div class="w-full bg-[#1c160b] rounded-3xl p-8 flex flex-col justify-between">
                         <div>
@@ -154,7 +191,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="w-full px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white text-center font-semibold">Plan nu mijn afspraak</a>
+                        <a href="https://barbershop-de-mink.salonized.com/widget_bookings/new" target="_blank" class="w-full px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white text-center font-semibold">Plan nu mijn afspraak</a>
                     </div>
                     <div class="w-full bg-[#1c160b] rounded-3xl p-8 flex flex-col justify-between">
                         <div>
@@ -189,7 +226,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="w-full px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white text-center font-semibold">Plan nu mijn afspraak</a>
+                        <a href="https://barbershop-de-mink.salonized.com/widget_bookings/new" target="_blank" class="w-full px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white text-center font-semibold">Plan nu mijn afspraak</a>
                     </div>
                 </div>
             </div>
@@ -221,8 +258,8 @@
                         Mijn naam is Bart Minkman, eigenaar van Barbershop De Mink. Gepassioneerd barbier, docent bij Graafschap College en trainer op locatie. U bent welkom voor koffie, een goed gesprek en vakwerk.
                     </p>
                     <div class="flex items-center justify-between gap-4">
-                        <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen bij Bart</a>
-                        <a href="#" class="w-8 h-8 bg-[#947341] hover:bg-[#bc9355] transition duration-300 rounded-full flex items-center justify-center">
+                        <a href="https://barbershop-de-mink.salonized.com/widget_bookings/new" target="_blank" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen bij Bart</a>
+                        <a href="https://www.instagram.com/barbershopdemink/" target="_blank" class="w-8 h-8 bg-[#947341] hover:bg-[#bc9355] transition duration-300 rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-instagram text-white"></i>
                         </a>
                     </div>
@@ -234,8 +271,8 @@
                         Mijn naam is Samuël Latul, zelfstandig barbier bij Barbershop De Mink. Ik ga voor strakke fades, scherpe lijnen en een verzorgde baard. U bent welkom voor koffie, eerlijk advies en vakwerk.
                     </p>
                     <div class="flex items-center justify-between gap-4">
-                        <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen bij Samuël</a>
-                        <a href="#" class="w-8 h-8 bg-[#947341] hover:bg-[#bc9355] transition duration-300 rounded-full flex items-center justify-center">
+                        <a href="https://barbershop-de-mink.salonized.com/widget_bookings/new" target="_blank" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen bij Samuël</a>
+                        <a href="https://www.instagram.com/barbersl.7/" target="_blank" class="w-8 h-8 bg-[#947341] hover:bg-[#bc9355] transition duration-300 rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-instagram text-white"></i>
                         </a>
                     </div>
@@ -247,8 +284,8 @@
                         Mijn naam is Ian Smits, zelfstandig barbier bij Barbershop De Mink. Van klassiek tot modern: ik werk graag netjes en precies, tot in de details. U bent welkom voor koffie, een goed gesprek en een frisse look.
                     </p>
                     <div class="flex items-center justify-between gap-4">
-                        <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen bij Ian</a>
-                        <a href="#" class="w-8 h-8 bg-[#947341] hover:bg-[#bc9355] transition duration-300 rounded-full flex items-center justify-center">
+                        <a href="https://barbershop-de-mink.salonized.com/widget_bookings/new" target="_blank" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen bij Ian</a>
+                        <a href="https://www.instagram.com/barbershopdemink/" target="_blank" class="w-8 h-8 bg-[#947341] hover:bg-[#bc9355] transition duration-300 rounded-full flex items-center justify-center">
                             <i class="fa-brands fa-instagram text-white"></i>
                         </a>
                     </div>
@@ -312,8 +349,8 @@
                         </p>
                     </div>
                     <div class="flex items-center gap-4 mt-6">
-                        <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
-                        <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#947341] hover:bg-[#bc9355] transition duration-300 text-sm text-white font-semibold">Bekijk onze diensten</a>
+                        <a href="https://barbershop-de-mink.salonized.com/widget_bookings/new" target="_blank" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
+                        <a href="#diensten" class="w-fit px-6 py-2 rounded-full bg-[#947341] hover:bg-[#bc9355] transition duration-300 text-sm text-white font-semibold">Bekijk onze diensten</a>
                     </div>
                 </div>
             </div>
@@ -410,20 +447,19 @@
                         <div>
                             <h6 class="text-lg text-[#bc9355] mb-4">Navigatie</h6>
                             <ul class="text-sm text-white font-semibold flex flex-col gap-2">
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Home</a></li>
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Diensten</a></li>
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Kappers</a></li>
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Over ons</a></li>
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Reviews</a></li>
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">FAQ</a></li>
+                                <li><a href="/" class="hover:text-[#bc9355] transition duration-300">Home</a></li>
+                                <li><a href="#diensten" class="hover:text-[#bc9355] transition duration-300">Diensten</a></li>
+                                <li><a href="#barbers" class="hover:text-[#bc9355] transition duration-300">Barbers</a></li>
+                                <li><a href="#faq" class="hover:text-[#bc9355] transition duration-300">FAQ</a></li>
+                                <li><a href="#reviews" class="hover:text-[#bc9355] transition duration-300">Reviews</a></li>
                             </ul>
                         </div>
                         <div>
                             <h6 class="text-lg text-[#bc9355] mb-4">Diensten</h6>
                             <ul class="text-sm text-white font-semibold flex flex-col gap-2">
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Knippen</a></li>
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Baard</a></li>
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Overige</a></li>
+                                <li><a href="#diensten" class="hover:text-[#bc9355] transition duration-300">Knippen</a></li>
+                                <li><a href="#diensten" class="hover:text-[#bc9355] transition duration-300">Baard</a></li>
+                                <li><a href="#diensten" class="hover:text-[#bc9355] transition duration-300">Overige</a></li>
                             </ul>
                         </div>
                         <div>
@@ -614,6 +650,54 @@
                         if (content) content.classList.remove('hidden');
                     }
                     });
+                });
+            });
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                const menu = document.getElementById('mobile-menu');
+                const openBtn = document.getElementById('mobile-menu-open');
+                const closeBtn = document.getElementById('mobile-menu-close');
+
+                if (!menu || !openBtn || !closeBtn) return;
+
+                const lockScroll = (locked) => {
+                    document.documentElement.classList.toggle('overflow-hidden', locked);
+                    document.body.classList.toggle('overflow-hidden', locked);
+                };
+
+                const openMenu = () => {
+                    menu.classList.add('active');
+                    openBtn.setAttribute('aria-expanded', 'true');
+                    menu.setAttribute('aria-hidden', 'false');
+                    lockScroll(true);
+                };
+
+                const closeMenu = () => {
+                    menu.classList.remove('active');
+                    openBtn.setAttribute('aria-expanded', 'false');
+                    menu.setAttribute('aria-hidden', 'true');
+                    lockScroll(false);
+                };
+
+                openBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openMenu();
+                });
+
+                closeBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    closeMenu();
+                });
+
+                // Sluit als je op een menu-link klikt
+                menu.querySelectorAll('a').forEach((a) => {
+                    a.addEventListener('click', () => closeMenu());
+                });
+
+                // Sluit met ESC
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') closeMenu();
                 });
             });
             </script>
