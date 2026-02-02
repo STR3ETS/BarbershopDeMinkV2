@@ -52,7 +52,7 @@
     </head>
     <body class="bg-[#141008]">
         <div class="grain pointer-events-none"></div>
-        <div id="mobile-menu" class="block md:hidden fixed inset-0 z-[9999] bg-[#141008]">
+        <div id="mobile-menu" class="block md:hidden fixed inset-0 z-[200] bg-[#141008]">
             <div class="w-full h-auto py-8 px-4">
                 <div class="max-w-[1400px] mx-auto grid grid-cols-5 flex items-center">
                     <div>
