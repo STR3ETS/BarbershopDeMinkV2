@@ -26,6 +26,10 @@
         @endif
 
         <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
             .faq-item.is-open .faq-title { color: #bc9355; }
             .faq-item.is-open .faq-icon { transform: rotate(180deg); color: #bc9355; }
         </style>
@@ -33,45 +37,48 @@
     </head>
     <body class="bg-[#141008]">
         <div class="grain pointer-events-none"></div>
-        <div class="w-full h-auto py-8">
+        <div class="w-full h-auto py-8 px-4">
             <div class="max-w-[1400px] mx-auto grid grid-cols-5 flex items-center">
                 <div>
                     <img src="/assets/logo-wit.png" alt="Barbershop De Mink" class="max-w-14">
                 </div>
                 <div class="col-span-3 flex items-center justify-center">
-                    <ul class="flex items-center gap-8 text-white text-sm font-semibold">
-                        <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Home</a></li>
-                        <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Diensten</a></li>
-                        <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Barbers</a></li>
-                        <li><a href="#" class="hover:text-[#bc9355] transition duration-300">FAQ</a></li>
-                        <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Reviews</a></li>
+                    <ul class="hidden md:flex items-center gap-8 text-white text-sm font-semibold">
+                        <li><a href="/" class="hover:text-[#bc9355] transition duration-300">Home</a></li>
+                        <li><a href="#diensten" class="hover:text-[#bc9355] transition duration-300">Diensten</a></li>
+                        <li><a href="#barbers" class="hover:text-[#bc9355] transition duration-300">Barbers</a></li>
+                        <li><a href="#faq" class="hover:text-[#bc9355] transition duration-300">FAQ</a></li>
+                        <li><a href="#reviews" class="hover:text-[#bc9355] transition duration-300">Reviews</a></li>
                     </ul>
                 </div>
                 <div class="flex items-center justify-end">
-                    <a href="#" class="px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
+                    <button class="block md:hidden">
+                        <i class="fa-solid fa-bars text-white"></i>
+                    </button>
+                    <a href="#" class="hidden md:block px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
                 </div>
             </div>
         </div>
-        <div class="w-full h-auto">
+        <div class="w-full h-auto px-4">
             <div class="max-w-[1400px] mx-auto flex flex-col gap-8">
-                <div class="w-full h-[450px] rounded-3xl bg-cover bg-center relative" style="background-image: url('/assets/hero-home.webp')">
-                    <div class="w-full h-full bg-[#141008]/40 flex flex-col justify-center px-8 grid grid-cols-3">
-                        <div class="col-span-2 h-full flex flex-col justify-center">
-                            <h1 class="hero-title text-[35px] md:text-[45px] lg:text-[65px] font-[700] text-white mb-8 leading-[1]">Stap binnen en laat ons <br>u <span class="backdrop-underline hero-underline">stijlvol</span> maken.</h1>
-                            <p class="hero-sub text-sm text-white opacity-80 max-w-[500px] mb-4">
+                <div class="w-full h-[850px] md:h-[450px] rounded-3xl bg-cover bg-center relative" style="background-image: url('/assets/hero-home.webp')">
+                    <div class="w-full h-full bg-[#141008]/40 md:justify-center flex flex-col justify-between px-8 py-16 md:py-0 md:grid md:grid-cols-3">
+                        <div class="md:col-span-2 md:h-full flex flex-col justify-center">
+                            <h1 class="hero-title text-[36px] md:text-[45px] lg:text-[65px] font-[700] text-white mb-8 leading-[1] text-center md:text-start">Stap binnen en laat ons <br>u <span class="backdrop-underline hero-underline">stijlvol</span> maken.</h1>
+                            <p class="hero-sub text-sm text-white opacity-80 text-center md:text-start md:max-w-[500px] mb-4">
                                 Bij ons draait alles om stijl. Van klassieke snitten tot moderne looks,
                                 wij creëren moeiteloos stijlvolle verschijningen die jouw persoonlijkheid accentueren.
                                 Stap binnen en ontdek de kunst van verfijnde grooming
                             </p>
-                            <div class="hero-ctas flex items-center gap-4">
+                            <div class="hero-ctas flex items-center justify-center md:justify-start gap-4">
                                 <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen</a>
                                 <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#141008] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Diensten bekijken</a>
                             </div>
                         </div>
-                        <div class="py-8 flex flex-col items-end">
-                            <div class="flex items-center justify-end gap-6">
-                                <video class="max-w-[12rem] rounded-xl border border-[#bc9355]" src="/assets/reels/day-at-shop.mp4" autoplay loop muted playsinline></video>
-                                <video class="max-w-[12rem] rounded-xl border border-[#bc9355]" src="/assets/reels/lil-bro.mp4" autoplay loop muted playsinline></video>
+                        <div class="md:py-8 flex flex-col md:items-end items-center ">
+                            <div class="flex items-center justify-end md:gap-6">
+                                <video class="w-1/2 mr-4 md:max-w-[12rem] rounded-xl border border-[#bc9355]" src="/assets/reels/day-at-shop.mp4" autoplay loop muted playsinline></video>
+                                <video class="w-1/2 -mr-2 md:max-w-[12rem] rounded-xl border border-[#bc9355]" src="/assets/reels/lil-bro.mp4" autoplay loop muted playsinline></video>
                             </div>
                             <a href="https://www.instagram.com/barbershopdemink/" target="_blank" class="mt-4 flex items-center gap-4 text-white hover:text-[#bc9355] transition duration-300">
                                 <h6 class="text-lg">
@@ -84,10 +91,10 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-auto pt-30 pb-15">
+        <div id="diensten" class="w-full h-auto pt-30 pb-15 px-4">
             <div class="max-w-[1400px] mx-auto flex flex-col gap-12">
-                <h2 class="text-5xl text-white text-center font-[500]">Tarieven die passen bij<br><span class="text-[#947341]">vakmanschap</span></h2>
-                <div class="grid grid-cols-3 gap-12">
+                <h2 class="text-4xl md:text-5xl text-white text-center font-[500]">Tarieven die passen bij<br><span class="text-[#947341]">vakmanschap</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
                     <div class="w-full bg-[#1c160b] rounded-3xl p-8 flex flex-col justify-between">
                         <div>
                             <h2 class="text-2xl text-[#bc9355] text-center font-[700] mb-6">Knippen</h2>
@@ -187,26 +194,26 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-auto bg-[#1c160b] py-15">
+        <div class="w-full h-auto bg-[#1c160b] py-15 px-4">
             <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-12">
-                <div class="w-full flex items-end justify-between">
-                    <h2 class="text-5xl text-white font-[500]">Meer dan<br>een <span class="text-[#947341]">knipbeurt</span></h2>
-                    <p class="text-sm text-white opacity-80 max-w-[500px] text-end">
+                <div class="w-full flex flex-col md:flex-row md:items-end md:justify-between">
+                    <h2 class="text-4xl md:text-5xl text-white font-[500] mb-4 md:mb-0">Meer dan<br class="hidden md:block"> een <span class="text-[#947341]">knipbeurt</span></h2>
+                    <p class="text-sm text-white opacity-80 max-w-[500px] md:text-end">
                         Een knipbeurt is bij ons een beleving. Persoonlijk advies, vakmanschap en een ontspannen sfeer staan altijd centraal.
                     </p>
                 </div>
-                <div class="w-full flex items-center justify-between">
-                    <img src="/assets/intro-1.webp" class="max-w-[15rem] rounded-3xl">
-                    <img src="/assets/intro-2.webp" class="max-w-[15rem] rounded-3xl">
-                    <img src="/assets/intro-3.webp" class="max-w-[15rem] rounded-3xl">
-                    <img src="/assets/intro-4.webp" class="max-w-[15rem] rounded-3xl">
-                    <img src="/assets/intro-5.webp" class="max-w-[15rem] rounded-3xl">
+                <div class="w-full flex flex-col grid grid-cols-2 md:grid-cols-5 md:gap-14 gap-6 md:flex-row md:items-center md:justify-between">
+                    <img src="/assets/intro-1.webp" class="md:max-w-[15rem] rounded-3xl">
+                    <img src="/assets/intro-2.webp" class="md:max-w-[15rem] rounded-3xl">
+                    <img src="/assets/intro-3.webp" class="md:max-w-[15rem] rounded-3xl">
+                    <img src="/assets/intro-4.webp" class="md:max-w-[15rem] rounded-3xl">
+                    <img src="/assets/intro-5.webp" class="hidden md:block md:max-w-[15rem] rounded-3xl">
                 </div>
             </div>
         </div>
-        <div class="w-full h-auto py-15">
-            <div class="max-w-[1400px] mx-auto grid grid-cols-3 gap-12">
-                <h2 class="text-5xl text-white text-center font-[500] col-span-3">Barbers met passie voor<br><span class="text-[#947341]">hun specialisme</span></h2>
+        <div id="barbers" class="w-full h-auto py-15 px-4">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <h2 class="text-4xl md:text-5xl text-white text-center font-[500] md:col-span-3 mb-6 md:mb-0">Barbers met passie voor<br><span class="text-[#947341]">hun specialisme</span></h2>
                 <div class="bg-[#1c160b] rounded-3xl p-8">
                     <div class="w-full aspect-square rounded-2xl bg-cover bg-center mb-6" style="background-image: url('/assets/bartminkman.jpg')"></div>
                     <h2 class="text-2xl text-[#bc9355] text-left font-[700] mb-6">Bart Minkman</h2>
@@ -221,10 +228,10 @@
                     </div>
                 </div>
                 <div class="bg-[#1c160b] rounded-3xl p-8">
-                    <div class="w-full aspect-square rounded-2xl bg-gray-200 mb-6"></div>
+                    <div class="w-full aspect-square rounded-2xl bg-cover bg-bottom mb-6" style="background-image: url('/assets/samuel.jpeg')"></div>
                     <h2 class="text-2xl text-[#bc9355] text-left font-[700] mb-6">Samuël Latul</h2>
                     <p class="text-sm text-white opacity-80 mb-8">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, quas! Praesentium vero, dolorem tempora vel, dignissimos quod ad obcaecati fugit mollitia repellat similique, omnis consequatur quaerat porro soluta.
+                        Mijn naam is Samuël Latul, zelfstandig barbier bij Barbershop De Mink. Ik ga voor strakke fades, scherpe lijnen en een verzorgde baard. U bent welkom voor koffie, eerlijk advies en vakwerk.
                     </p>
                     <div class="flex items-center justify-between gap-4">
                         <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen bij Samuël</a>
@@ -234,10 +241,10 @@
                     </div>
                 </div>
                 <div class="bg-[#1c160b] rounded-3xl p-8">
-                    <div class="w-full aspect-square rounded-2xl bg-gray-200 mb-6"></div>
+                    <div class="w-full aspect-square rounded-2xl bg-cover bg-center mb-6" style="background-image: url('/assets/ian.jpeg')"></div>
                     <h2 class="text-2xl text-[#bc9355] text-left font-[700] mb-6">Ian Smits</h2>
                     <p class="text-sm text-white opacity-80 mb-8">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, quas! Praesentium vero, dolorem tempora vel, dignissimos quod ad obcaecati fugit mollitia repellat similique, omnis consequatur quaerat porro soluta.
+                        Mijn naam is Ian Smits, zelfstandig barbier bij Barbershop De Mink. Van klassiek tot modern: ik werk graag netjes en precies, tot in de details. U bent welkom voor koffie, een goed gesprek en een frisse look.
                     </p>
                     <div class="flex items-center justify-between gap-4">
                         <a href="#" class="w-fit px-6 py-2 rounded-full bg-[#bc9355] hover:bg-[#947341] transition duration-300 text-sm text-white font-semibold">Afspraak plannen bij Ian</a>
@@ -248,11 +255,11 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-auto py-15">
-            <div class="max-w-[1400px] mx-auto grid grid-cols-3 gap-12">
-                <div class="col-span-3 flex items-end justify-between">
-                    <h2 class="text-5xl text-white font-[500]">Vragen?<br>wij hebben een <span class="text-[#947341]">antwoord</span></h2>
-                    <p class="text-sm text-white opacity-80 max-w-[500px] text-end">
+        <div id="faq" class="w-full h-auto py-15 px-4">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-3 gap-6">
+                <div class="col-span-3 flex flex-col md:flex-row md:items-end justify-between mb-4 md:mb-0">
+                    <h2 class="text-4xl md:text-5xl text-white font-[500]">Vragen?<br>wij hebben een <span class="text-[#947341]">antwoord</span></h2>
+                    <p class="text-sm text-white opacity-80 max-w-[500px] md:text-end mt-4 md:mt-0">
                         Van afspraken maken tot onderhoud van je coupe.<br>Hier vind je snel wat je zoekt.
                     </p>
                 </div>
@@ -261,7 +268,7 @@
                 <div class="col-span-3 flex flex-col gap-6">
                     <div class="faq-item w-full rounded-3xl bg-[#1c160b] p-8 cursor-pointer select-none">
                         <div class="flex items-center justify-between">
-                            <h2 class="faq-title text-lg text-white text-left font-[500] transition duration-300">Hoe lang duurt een knipbeurt gemiddeld?</h2>
+                            <h2 class="faq-title text-lg text-white text-left font-[500] transition duration-300 max-w-[80%]">Hoe lang duurt een knipbeurt gemiddeld?</h2>
                             <i class="faq-icon fa-solid fa-chevron-down text-white transition duration-300"></i>
                         </div>
                         <p class="faq-content hidden text-sm text-white opacity-80 mt-4">
@@ -270,7 +277,7 @@
                     </div>
                     <div class="faq-item w-full rounded-3xl bg-[#1c160b] p-8 cursor-pointer select-none">
                         <div class="flex items-center justify-between">
-                            <h2 class="faq-title text-lg text-white text-left font-[500] transition duration-300">Kan ik bij jullie pinnen of alleen contant betalen?</h2>
+                            <h2 class="faq-title text-lg text-white text-left font-[500] transition duration-300 max-w-[80%]">Kan ik bij jullie pinnen of alleen contant betalen?</h2>
                             <i class="faq-icon fa-solid fa-chevron-down text-white transition duration-300"></i>
                         </div>
                         <p class="faq-content hidden text-sm text-white opacity-80 mt-4">
@@ -279,7 +286,7 @@
                     </div>
                     <div class="faq-item w-full rounded-3xl bg-[#1c160b] p-8 cursor-pointer select-none">
                         <div class="flex items-center justify-between">
-                            <h2 class="faq-title text-lg text-white text-left font-[500] transition duration-300">Doen jullie ook baardbehandelingen zonder knippen?</h2>
+                            <h2 class="faq-title text-lg text-white text-left font-[500] transition duration-300 max-w-[80%]">Doen jullie ook baardbehandelingen zonder knippen?</h2>
                             <i class="faq-icon fa-solid fa-chevron-down text-white transition duration-300"></i>
                         </div>
                         <p class="faq-content hidden text-sm text-white opacity-80 mt-4">
@@ -288,7 +295,7 @@
                     </div>
                     <div class="faq-item w-full rounded-3xl bg-[#1c160b] p-8 cursor-pointer select-none">
                         <div class="flex items-center justify-between">
-                            <h2 class="faq-title text-lg text-white text-left font-[500] transition duration-300">Wat gebeurt er als ik mijn afspraak moet annuleren of verzetten?</h2>
+                            <h2 class="faq-title text-lg text-white text-left font-[500] transition duration-300 max-w-[80%]">Wat gebeurt er als ik mijn afspraak moet annuleren of verzetten?</h2>
                             <i class="faq-icon fa-solid fa-chevron-down text-white transition duration-300"></i>
                         </div>
                         <p class="faq-content hidden text-sm text-white opacity-80 mt-4">
@@ -297,7 +304,7 @@
                     </div>
                     <div class="faq-item w-full rounded-3xl bg-[#1c160b] p-8 cursor-pointer select-none">
                         <div class="flex items-center justify-between">
-                            <h2 class="faq-title text-lg text-white text-left font-[500] transition duration-300">Knippen jullie ook kinderen?</h2>
+                            <h2 class="faq-title text-lg text-white text-left font-[500] transition duration-300 max-w-[80%]">Knippen jullie ook kinderen?</h2>
                             <i class="faq-icon fa-solid fa-chevron-down text-white transition duration-300"></i>
                         </div>
                         <p class="faq-content hidden text-sm text-white opacity-80 mt-4">
@@ -311,8 +318,55 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-auto py-15 bg-[#0f0a05]">
+        <div id="reviews" class="w-full h-auto py-15 bg-[#0f0a05] px-4">
             <div class="max-w-[1400px] mx-auto">
+                <div class="w-full mb-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+                    <div class="p-8 rounded-3xl bg-[#141008]">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg text-white text-left font-[500] transition duration-300">Romano Zemar</h2>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                            </div>
+                        </div>
+                        <p class="text-sm text-white opacity-80 mt-4">
+                           <span class="text-[#947341]">Barbershop De Mink is geweldig!</span> Bart knipt niet alleen supergoed, maar zijn enthousiasme maakt het hele bezoek extra fijn. Je merkt echt dat hij passie heeft voor het vak, en dat zie je terug in het resultaat. Absoluut een aanrader!
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-[#141008]">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg text-white text-left font-[500] transition duration-300">Nino Middelburg</h2>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                            </div>
+                        </div>
+                        <p class="text-sm text-white opacity-80 mt-4">
+                           <span class="text-[#947341]">Prachtige barbershop met klassieke uitstraling.</span> Enorm tevreden over de kwaliteit en de prijs. Grote aanrader voor eenieder die van stijl en kwaliteit houdt.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-[#141008]">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg text-white text-left font-[500] transition duration-300">Ramon Turba</h2>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                                <i class="fa-solid fa-star text-[#bc9355] fa-sm"></i>
+                            </div>
+                        </div>
+                        <p class="text-sm text-white opacity-80 mt-4">
+                           <span class="text-[#947341]">Veruit de beste barber van Zevenaar en omgeving.</span> Er word goed met je omgegaan en geluisterd naar de wensen. Daarnaast een super mooie zaak, en een goed kapsel! Mij zie je zeker snel terug!
+                        </p>
+                    </div>
+                </div>
                 <div class="w-full flex items-center justify-between mb-10">
                     <div>
                         <div class="flex items-center gap-4 mb-6">
@@ -327,7 +381,7 @@
                             Stap binnen en ontdek de kunst van verfijnde grooming
                         </p>
                     </div>
-                    <svg class="max-w-[9rem] rotating-seal"
+                    <svg class="hidden md:block max-w-[9rem] rotating-seal"
                         viewBox="0 0 100 100"
                         xmlns="http://www.w3.org/2000/svg">
                         <path style="fill:none!important;stroke:none!important;"
@@ -352,7 +406,7 @@
                     </svg>
                 </div>
                 <div class="w-full grid grid-cols-10 gap-8">
-                    <div class="col-span-5 flex gap-20">
+                    <div class="col-span-10 md:col-span-5 flex gap-20">
                         <div>
                             <h6 class="text-lg text-[#bc9355] mb-4">Navigatie</h6>
                             <ul class="text-sm text-white font-semibold flex flex-col gap-2">
@@ -367,9 +421,9 @@
                         <div>
                             <h6 class="text-lg text-[#bc9355] mb-4">Diensten</h6>
                             <ul class="text-sm text-white font-semibold flex flex-col gap-2">
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Haar knippen & Stylen</a></li>
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Baard knippen & stylen</a></li>
-                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Speciale diensten</a></li>
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Knippen</a></li>
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Baard</a></li>
+                                <li><a href="#" class="hover:text-[#bc9355] transition duration-300">Overige</a></li>
                             </ul>
                         </div>
                         <div>
@@ -382,7 +436,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-span-5">
+                    <div class="col-span-10 md:col-span-5">
                         <div class="w-full h-full rounded-3xl overflow-hidden border border-white/10 shadow-sm">
                             <iframe
                                 title="Barbershop De Mink - Locatie"
