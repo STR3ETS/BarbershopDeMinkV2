@@ -406,7 +406,7 @@
                     </svg>
                 </div>
                 <div class="w-full grid grid-cols-10 gap-8">
-                    <div class="col-span-10 md:col-span-5 flex md:gap-20 grid grid-cols-3 gap-6">
+                    <div class="col-span-10 md:col-span-5 flex md:gap-20 grid grid-cols-2 md:grid-cols-3 gap-6">
                         <div>
                             <h6 class="text-lg text-[#bc9355] mb-4">Navigatie</h6>
                             <ul class="text-sm text-white font-semibold flex flex-col gap-2">
