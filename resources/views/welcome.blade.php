@@ -62,7 +62,7 @@
         <div class="w-full h-auto px-4">
             <div class="max-w-[1400px] mx-auto flex flex-col gap-8">
                 <div class="w-full h-[850px] md:h-[450px] rounded-3xl bg-cover bg-center relative" style="background-image: url('/assets/hero-home.webp')">
-                    <div class="w-full h-full bg-[#141008]/40 md:justify-center flex flex-col justify-between px-8 py-16 md:py-0 md:grid md:grid-cols-3">
+                    <div class="w-full h-full bg-[#141008]/40 md:justify-center flex flex-col justify-between px-6 md:px-8 py-16 md:py-0 md:grid md:grid-cols-3">
                         <div class="md:col-span-2 md:h-full flex flex-col justify-center">
                             <h1 class="hero-title text-[36px] md:text-[45px] lg:text-[65px] font-[700] text-white mb-8 leading-[1] text-center md:text-start">Stap binnen en laat ons <br>u <span class="backdrop-underline hero-underline">stijlvol</span> maken.</h1>
                             <p class="hero-sub text-sm text-white opacity-80 text-center md:text-start md:max-w-[500px] mb-4">
