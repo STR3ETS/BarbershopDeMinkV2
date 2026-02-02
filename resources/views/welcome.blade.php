@@ -449,7 +449,7 @@
                     </div>
                 </div>
                 <hr class="border-white/10 my-10">
-                <div class="w-full flex items-center justify-between">
+                <div class="w-full flex flex-col md:flex-row items-center justify-center md:justify-between">
                     <p class="text-xs text-white opacity-50">
                         Copyright © Barbershop De Mink
                     </p>
