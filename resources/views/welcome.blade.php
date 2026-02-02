@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Barbershop De Mink - Stap binnen en laat ons u stijlvol maken!</title>
+        <link rel="icon" type="image/x-icon" href="/assets/logo-wit.png">
+        <meta name="description" content="Barbershop De Mink in Zevenaar: knippen, fades, baard trimmen en hot towel shave. Persoonlijk advies, vakmanschap en ontspannen sfeer. Plan direct je afspraak.">
+        <meta name="keywords" content="barbershop zevenaar, herenkapper zevenaar, kapper zevenaar, baard trimmen zevenaar, hot towel shave, knippen heren, fades, barber, baard verzorgen, afspraak barbershop, barbershop de mink">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
