@@ -317,7 +317,7 @@
         </h2>
 
         <div class="bg-[#1c160b] rounded-3xl p-8">
-          <div class="w-full aspect-square rounded-2xl bg-cover bg-center mb-6" style="background-image: url('/assets/bartminkman.jpg')"></div>
+          <div class="w-full aspect-square rounded-2xl bg-cover bg-center mb-6" style="background-image: url('/assets/bartminkman.jpeg')"></div>
           <h2 class="text-2xl text-[#bc9355] text-left font-[700] mb-6">Bart Minkman</h2>
           <p class="text-sm text-white opacity-80 mb-8">
             Mijn naam is Bart Minkman, eigenaar van Barbershop De Mink. Gepassioneerd barbier, docent bij Graafschap College en trainer op locatie. U bent welkom voor koffie, een goed gesprek en vakwerk.
