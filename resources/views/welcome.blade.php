@@ -644,7 +644,7 @@
             class="w-full px-6 py-4 rounded-2xl bg-[#141008] hover:bg-[#947341] transition duration-300 text-white font-semibold flex items-center justify-between"
           >
           <div class="flex items-center gap-4">
-            <div class="w-7 h-7 bg-cover bg-center rounded-xl" style="background-image: url('assets/bartminkman.jpg')"></div>
+            <div class="w-7 h-7 bg-cover bg-center rounded-xl" style="background-image: url('assets/bartminkman.jpeg')"></div>
             <span>Bart</span>
           </div>
             <i class="fa-solid fa-arrow-right fa-xs text-white/70"></i>
