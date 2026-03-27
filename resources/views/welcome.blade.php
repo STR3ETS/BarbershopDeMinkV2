@@ -128,7 +128,7 @@
 
             <div class="md:col-span-2 md:h-full flex flex-col justify-center">
               <h1 class="hero-title text-[36px] md:text-[45px] lg:text-[65px] font-[700] text-white mb-8 leading-[1] text-center md:text-start">
-                Stap binnen en laat ons <br class="hidden md:block">u <span class="backdrop-underline hero-underline">stijlvol</span> maken.
+                Stap binnen en <span class="whitespace-nowrap">laat ons</span> <br class="hidden md:block">u <span class="backdrop-underline hero-underline">stijlvol</span> maken.
               </h1>
 
               <p class="hero-sub text-sm text-white opacity-80 text-center md:text-start md:max-w-[500px] mb-4">
